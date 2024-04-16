@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+BookShop_ru_RU.ts
+SETTINGS.cpp
+SETTINDS.h
