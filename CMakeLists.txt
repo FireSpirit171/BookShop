@@ -36,7 +36,15 @@ set(PROJECT_SOURCES
         Widgets/UsersOrdersWidget/usersorderswidget.h
         Widgets/UsersOrdersWidget/usersorderswidget.cpp
         Widgets/UsersOrdersWidget/usersorderswidget.ui
-        ${TS_FILES}
+        Widgets/Reports/reports.h
+        Widgets/Reports/reports.cpp
+        Widgets/Reports/reports.ui
+        Widgets/AllOrders/allorders.h
+        Widgets/AllOrders/allorders.cpp
+        Widgets/AllOrders/allorders.ui
+        Widgets/PublisherBooks/publisherbooks.h
+        Widgets/PublisherBooks/publisherbooks.cpp
+        Widgets/PublisherBooks/publisherbooks.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

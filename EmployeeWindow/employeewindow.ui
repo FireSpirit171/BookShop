@@ -6,24 +6,49 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>463</width>
-    <height>351</height>
+    <width>638</width>
+    <height>525</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <property name="styleSheet">
+   <string notr="true">background-color: green;</string>
+  </property>
+  <widget class="QPushButton" name="reports">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>150</y>
-     <width>80</width>
-     <height>24</height>
+     <y>110</y>
+     <width>221</width>
+     <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: black;
+font-size: 20px</string>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Отчеты</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>60</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 30px;
+color:white</string>
+   </property>
+   <property name="text">
+    <string>Режим сотрудника</string>
    </property>
   </widget>
  </widget>

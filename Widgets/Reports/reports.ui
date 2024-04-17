@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Reports</class>
+ <widget class="QDialog" name="Reports">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>694</width>
+    <height>579</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: green</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>50</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font-size: 30px</string>
+   </property>
+   <property name="text">
+    <string>Отчеты</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="all_orders">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>130</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: black;
+font-size: 20px</string>
+   </property>
+   <property name="text">
+    <string>Все заказы</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="publisher_books">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>190</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: black;
+font-size: 20px</string>
+   </property>
+   <property name="text">
+    <string>Издательства и их книги</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="orders_by_date">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>250</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: black;
+font-size: 20px</string>
+   </property>
+   <property name="text">
+    <string>Заказы по дате</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="client_orders">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>310</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: black;
+font-size: 20px</string>
+   </property>
+   <property name="text">
+    <string>Заказы клиента</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="authors_books">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>370</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: black;
+font-size: 14px</string>
+   </property>
+   <property name="text">
+    <string>Количество купленных книг автора</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gistogramm">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>430</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: black;
+font-size: 14px</string>
+   </property>
+   <property name="text">
+    <string>Гистограмма стоимости всех книг</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
