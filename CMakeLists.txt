@@ -30,6 +30,9 @@ set(PROJECT_SOURCES
         EmployeeWindow/employeewindow.h
         EmployeeWindow/employeewindow.cpp
         EmployeeWindow/employeewindow.ui
+        Widgets/AvailableBooksWidget/availablebookswidget.h
+        Widgets/AvailableBooksWidget/availablebookswidget.cpp
+        Widgets/AvailableBooksWidget/availablebookswidget.ui
         ${TS_FILES}
 )
 

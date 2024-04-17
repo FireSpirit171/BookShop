@@ -52,8 +52,6 @@ int main(int argc, char *argv[])
             query.bindValue(":login", login);
             query.bindValue(":password", password);
 
-            qDebug() << queryStr;
-
             // Выполнение запроса
             if (query.exec()) {
                 if (query.next()) {
@@ -62,14 +60,12 @@ int main(int argc, char *argv[])
                         // Если пользователь найден, определяем роль и открываем соответствующее окно
                         w.hide();
                         if (role == "Покупатель") {
-                            std::cout<< "User" << std::endl;
                             UserWindow userWindow;
                             QObject::connect(&userWindow, &UserWindow::finished, [&w]() {
                                 w.show(); // Отображаем главное окно при закрытии EmployeeWindow
                             });
                             userWindow.exec();
                         } else if (role == "Сотрудник") {
-                            std::cout<< "Employee" << std::endl;
                             EmployeeWindow employeeWindow;
                             QObject::connect(&employeeWindow, &EmployeeWindow::finished, [&w]() {
                                 w.show(); // Отображаем главное окно при закрытии EmployeeWindow
