@@ -6,11 +6,13 @@
 UserWindow::UserWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::UserWindow),
-    booksWidget(nullptr)
+    booksWidget(nullptr),
+    ordersWidget(nullptr)
 {
     ui->setupUi(this);
 
     connect(ui->available_books, &QPushButton::clicked, this, &UserWindow::showBooksInStock);
+    connect(ui->users_orders, &QPushButton::clicked, this, &UserWindow::showOrders);
 }
 
 UserWindow::~UserWindow()
@@ -37,4 +39,21 @@ void UserWindow::booksWidgetClosed()
     // Удаляем виджет книг
     delete booksWidget;
     booksWidget = nullptr;
+}
+
+void UserWindow::showOrders(){
+    if (!ordersWidget)
+    {
+        ordersWidget = new UsersOrdersWidget();
+        connect(ordersWidget, &UsersOrdersWidget::finished, this, &UserWindow::ordersWidgetClosed);
+    }
+
+    ordersWidget->exec();
+}
+
+void UserWindow::ordersWidgetClosed()
+{
+    // Удаляем виджет книг
+    delete ordersWidget;
+    ordersWidget = nullptr;
 }

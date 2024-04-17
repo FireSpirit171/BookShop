@@ -53,6 +53,24 @@ color:black</string>
     <string>Книги в наличии</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="users_orders">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>210</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:white;
+color:black;
+font-size:20px</string>
+   </property>
+   <property name="text">
+    <string>Заказы клиента</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -33,6 +33,9 @@ set(PROJECT_SOURCES
         Widgets/AvailableBooksWidget/availablebookswidget.h
         Widgets/AvailableBooksWidget/availablebookswidget.cpp
         Widgets/AvailableBooksWidget/availablebookswidget.ui
+        Widgets/UsersOrdersWidget/usersorderswidget.h
+        Widgets/UsersOrdersWidget/usersorderswidget.cpp
+        Widgets/UsersOrdersWidget/usersorderswidget.ui
         ${TS_FILES}
 )
 
