@@ -71,7 +71,7 @@ void AllOrders::showOrders()
         while (booksQuery.next()) {
             QString title = booksQuery.value("Title").toString();
             QString author = booksQuery.value("Author").toString();
-            booksList << title + " - " + author;
+            booksList << "\"" + title + "\"" + " - " + author;
         }
 
         // Создание строки для столбца "Книги"

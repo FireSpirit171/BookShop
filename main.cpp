@@ -42,7 +42,6 @@ int main(int argc, char *argv[])
             QString password = w.getPassword();
 
             // Формирование SQL-запроса с вставкой значений
-            // Формирование SQL-запроса с вставкой значений
             QString queryStr = "SELECT COUNT(*) FROM \"Users\" WHERE \"UserRole\" = :role AND \"Login\" = :login AND \"Password\" = :password";
 
             // Подготовка SQL-запроса
