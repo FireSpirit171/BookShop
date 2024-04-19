@@ -5,11 +5,15 @@ EmployeeWindow::EmployeeWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::EmployeeWindow),
     report(nullptr), // Инициализируем указатель на объект класса Reports как nullptr
-    publisherForm(nullptr)
+    publisherForm(nullptr),
+    supplierFoprm(nullptr),
+    clientForm(nullptr)
 {
     ui->setupUi(this);
     connect(ui->reports, &QPushButton::clicked, this, &EmployeeWindow::showReports);
     connect(ui->publisher, &QPushButton::clicked, this, &EmployeeWindow::showPublisherForm);
+    connect(ui->supplier, &QPushButton::clicked, this, &EmployeeWindow::showSupplierForm);
+    connect(ui->client, &QPushButton::clicked, this, &EmployeeWindow::showClientForm);
 }
 
 EmployeeWindow::~EmployeeWindow()
@@ -50,5 +54,40 @@ void EmployeeWindow::PublisherFormClosed()
     delete publisherForm;
     publisherForm = nullptr;
 }
+
+void EmployeeWindow::showSupplierForm(){
+    if (!supplierFoprm)
+    {
+        supplierFoprm = new SupplierForm();
+        connect(supplierFoprm, &SupplierForm::finished, this, &EmployeeWindow::SupplierFormClosed);
+    }
+
+    supplierFoprm->exec();
+}
+
+void EmployeeWindow::SupplierFormClosed()
+{
+    // Удаляем виджет книг
+    delete supplierFoprm;
+    supplierFoprm = nullptr;
+}
+
+void EmployeeWindow::showClientForm(){
+    if (!clientForm)
+    {
+        clientForm = new ClientForm();
+        connect(clientForm, &ClientForm::finished, this, &EmployeeWindow::ClientFormClosed);
+    }
+
+    clientForm->exec();
+}
+
+void EmployeeWindow::ClientFormClosed()
+{
+    // Удаляем виджет книг
+    delete clientForm;
+    clientForm = nullptr;
+}
+
 
 

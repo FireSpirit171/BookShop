@@ -55,6 +55,12 @@ set(PROJECT_SOURCES
     Widgets/PublisherForm/publisherform.h
     Widgets/PublisherForm/publisherform.cpp
     Widgets/PublisherForm/publisherform.ui
+    Widgets/SupplierForm/supplierform.h
+    Widgets/SupplierForm/supplierform.cpp
+    Widgets/SupplierForm/supplierform.ui
+    Widgets/ClientForm/clientform.h
+    Widgets/ClientForm/clientform.cpp
+    Widgets/ClientForm/clientform.ui
 )
 
 

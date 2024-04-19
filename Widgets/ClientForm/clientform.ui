@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientForm</class>
+ <widget class="QDialog" name="ClientForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>639</width>
+    <height>556</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: green</string>
+  </property>
+  <widget class="QPushButton" name="save">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>460</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: lightblue</string>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="next">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>450</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:black;
+background-color: lightblue</string>
+   </property>
+   <property name="text">
+    <string>Вперед</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="last_name">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>150</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size:16px</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>420</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: lightblue</string>
+   </property>
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>150</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size: 16px</string>
+   </property>
+   <property name="text">
+    <string>Фамилия</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>110</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size: 16px</string>
+   </property>
+   <property name="text">
+    <string>ID Клиента</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>20</y>
+     <width>151</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font-size: 36px</string>
+   </property>
+   <property name="text">
+    <string>Клиенты</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="previous">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>450</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: lightblue</string>
+   </property>
+   <property name="text">
+    <string>Назад</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_2">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>500</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color: lightblue</string>
+   </property>
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="client_id">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>110</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size: 16px</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>190</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size: 16px</string>
+   </property>
+   <property name="text">
+    <string>Имя</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="first_name">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>190</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size:16px</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>230</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size: 16px</string>
+   </property>
+   <property name="text">
+    <string>Отчество</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="middle_name">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>230</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size:16px</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>320</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size: 16px</string>
+   </property>
+   <property name="text">
+    <string>Дата рождения</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>360</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size: 16px</string>
+   </property>
+   <property name="text">
+    <string>Номер телефона</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="phone_number">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>360</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size:16px</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>270</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size: 16px</string>
+   </property>
+   <property name="text">
+    <string>Пол</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="date_of_birth">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>320</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: black;
+font-size: 16px</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="male">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>280</y>
+     <width>81</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size: 16px</string>
+   </property>
+   <property name="text">
+    <string>Муж</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="female">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>280</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size: 16px</string>
+   </property>
+   <property name="text">
+    <string>Жен</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
