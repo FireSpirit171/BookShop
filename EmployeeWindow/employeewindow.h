@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "../Widgets/Reports/reports.h" // Включаем заголовочный файл Reports
+#include "../Widgets/PublisherForm/publisherform.h"
 
 namespace Ui {
 class EmployeeWindow;
@@ -19,10 +20,13 @@ public:
 private slots:
     void showReports();
     void ReportsWidgetClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
+    void showPublisherForm();
+    void PublisherFormClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
 
 private:
     Ui::EmployeeWindow *ui;
     Reports *report; // Добавляем указатель на объект класса Reports
+    PublisherForm *publisherForm;
 };
 
 #endif // EMPLOYEEWINDOW_H

@@ -1,6 +1,5 @@
 #include "gistogrammbookprice.h"
 #include "ui_gistogrammbookprice.h"
-#include <iostream>
 
 GistogrammBookPrice::GistogrammBookPrice(QWidget *parent) :
     QDialog(parent),

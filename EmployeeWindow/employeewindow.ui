@@ -51,6 +51,24 @@ color:white</string>
     <string>Режим сотрудника</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="publisher">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>170</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size:20px</string>
+   </property>
+   <property name="text">
+    <string>Издательства</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

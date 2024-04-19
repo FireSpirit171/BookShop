@@ -7,6 +7,7 @@
 #include "../OrderByDate/orderbydate.h"
 #include "../UsersOrdersWidget/usersorderswidget.h"
 #include "../GistogrammBookPrice/gistogrammbookprice.h"
+#include "../DiagrammCarSupplier/diagrammcarsupplier.h"
 
 namespace Ui {
 class Reports;
@@ -31,6 +32,8 @@ private slots:
     void ClientOrdersWidgetClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
     void showGistogramm();
     void gistogrammWidgetClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
+    void showDiagramm();
+    void diagrammWidgetClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
 
 private:
     Ui::Reports *ui;
@@ -39,6 +42,8 @@ private:
     OrderByDate *orderByDate;
     UsersOrdersWidget *clientOrders;
     GistogrammBookPrice *gistogrammBookPrice;
+    DiagrammCarSupplier *diagrammCarSupplier;
+
 };
 
 #endif // REPORTS_H

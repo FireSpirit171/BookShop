@@ -49,6 +49,12 @@ set(PROJECT_SOURCES
     Widgets/GistogrammBookPrice/gistogrammbookprice.h
     Widgets/GistogrammBookPrice/gistogrammbookprice.cpp
     Widgets/GistogrammBookPrice/gistogrammbookprice.ui
+    Widgets/DiagrammCarSupplier/diagrammcarsupplier.h
+    Widgets/DiagrammCarSupplier/diagrammcarsupplier.cpp
+    Widgets/DiagrammCarSupplier/diagrammcarsupplier.ui
+    Widgets/PublisherForm/publisherform.h
+    Widgets/PublisherForm/publisherform.cpp
+    Widgets/PublisherForm/publisherform.ui
 )
 
 

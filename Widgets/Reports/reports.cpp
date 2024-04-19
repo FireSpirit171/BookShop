@@ -8,7 +8,8 @@ Reports::Reports(QWidget *parent) :
     publisherBooks(nullptr),
     orderByDate(nullptr),
     clientOrders(nullptr),
-    gistogrammBookPrice(nullptr)
+    gistogrammBookPrice(nullptr),
+    diagrammCarSupplier(nullptr)
 {
     ui->setupUi(this);
     connect(ui->all_orders, &QPushButton::clicked, this, &Reports::showOrders);
@@ -16,6 +17,7 @@ Reports::Reports(QWidget *parent) :
     connect(ui->orders_by_date, &QPushButton::clicked, this, &Reports::showOrdersByDate);
     connect(ui->client_orders, &QPushButton::clicked, this, &Reports::showClientOrders);
     connect(ui->gistogramm, &QPushButton::clicked, this, &Reports::showGistogramm);
+    connect(ui->diagramm, &QPushButton::clicked, this, &Reports::showDiagramm);
 }
 
 Reports::~Reports()
@@ -106,4 +108,21 @@ void Reports::gistogrammWidgetClosed()
     // Удаляем виджет книг
     delete gistogrammBookPrice;
     gistogrammBookPrice = nullptr;
+}
+
+void Reports::showDiagramm(){
+    if (!diagrammCarSupplier)
+    {
+        diagrammCarSupplier = new DiagrammCarSupplier();
+        connect(diagrammCarSupplier, &DiagrammCarSupplier::finished, this, &Reports::diagrammWidgetClosed);
+    }
+
+    diagrammCarSupplier->exec();
+}
+
+void Reports::diagrammWidgetClosed()
+{
+    // Удаляем виджет книг
+    delete diagrammCarSupplier;
+    diagrammCarSupplier = nullptr;
 }

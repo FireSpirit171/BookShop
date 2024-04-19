@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
         QObject::connect(&w, &MainWindow::loginButtonClicked, [&]() {
             QString role = w.getRole();
             if (role == ""){
-                QMessageBox::warning(&w, "Role Selection Error", "Please select a role.");
+                QMessageBox::warning(&w, "Ошибка.", "Выберите роль!");
                 return; // Возвращаемся из обработчика, не продолжая выполнение кода
             }
 
@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
                         }
                     } else {
                         // Если пользователь не найден, выводим сообщение об ошибке
-                        QMessageBox::warning(&w, "Login Error", "Invalid username or password.");
+                        QMessageBox::warning(&w, "Ошибка авторизации", "Неверный логин или пароль!");
                     }
                 }
             } else {
