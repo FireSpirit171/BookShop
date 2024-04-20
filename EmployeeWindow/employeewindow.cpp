@@ -7,13 +7,17 @@ EmployeeWindow::EmployeeWindow(QWidget *parent) :
     report(nullptr), // Инициализируем указатель на объект класса Reports как nullptr
     publisherForm(nullptr),
     supplierFoprm(nullptr),
-    clientForm(nullptr)
+    clientForm(nullptr),
+    sellerForm(nullptr),
+    referenceInformation(nullptr)
 {
     ui->setupUi(this);
     connect(ui->reports, &QPushButton::clicked, this, &EmployeeWindow::showReports);
     connect(ui->publisher, &QPushButton::clicked, this, &EmployeeWindow::showPublisherForm);
     connect(ui->supplier, &QPushButton::clicked, this, &EmployeeWindow::showSupplierForm);
     connect(ui->client, &QPushButton::clicked, this, &EmployeeWindow::showClientForm);
+    connect(ui->seller, &QPushButton::clicked, this, &EmployeeWindow::showSellerForm);
+    connect(ui->information, &QPushButton::clicked, this, &EmployeeWindow::showReferenceInformation);
 }
 
 EmployeeWindow::~EmployeeWindow()
@@ -88,6 +92,41 @@ void EmployeeWindow::ClientFormClosed()
     delete clientForm;
     clientForm = nullptr;
 }
+
+void EmployeeWindow::showSellerForm(){
+    if (!sellerForm)
+    {
+        sellerForm = new SellerForm();
+        connect(sellerForm, &SellerForm::finished, this, &EmployeeWindow::SellerFormClosed);
+    }
+
+    sellerForm->exec();
+}
+
+void EmployeeWindow::SellerFormClosed()
+{
+    // Удаляем виджет книг
+    delete sellerForm;
+    sellerForm = nullptr;
+}
+
+void EmployeeWindow::showReferenceInformation(){
+    if (!referenceInformation)
+    {
+        referenceInformation = new ReferenceInformation();
+        connect(referenceInformation, &ReferenceInformation::finished, this, &EmployeeWindow::ReferenceInformationClosed);
+    }
+
+    referenceInformation->exec();
+}
+
+void EmployeeWindow::ReferenceInformationClosed()
+{
+    // Удаляем виджет книг
+    delete referenceInformation;
+    referenceInformation = nullptr;
+}
+
 
 
 

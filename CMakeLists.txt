@@ -61,6 +61,12 @@ set(PROJECT_SOURCES
     Widgets/ClientForm/clientform.h
     Widgets/ClientForm/clientform.cpp
     Widgets/ClientForm/clientform.ui
+    Widgets/SellerForm/sellerform.h
+    Widgets/SellerForm/sellerform.cpp
+    Widgets/SellerForm/sellerform.ui
+    Widgets/ReferenceInformation/referenceinformation.h
+    Widgets/ReferenceInformation/referenceinformation.cpp
+    Widgets/ReferenceInformation/referenceinformation.ui
 )
 
 

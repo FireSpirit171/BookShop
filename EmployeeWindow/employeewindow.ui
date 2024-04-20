@@ -55,7 +55,7 @@ color:white</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>230</y>
+     <y>290</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -73,7 +73,7 @@ font-size:20px</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>290</y>
+     <y>350</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -103,6 +103,42 @@ font-size:20px</string>
    </property>
    <property name="text">
     <string>Клиенты</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="seller">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>230</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size:20px</string>
+   </property>
+   <property name="text">
+    <string>Сотрудники</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="information">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>410</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size:18px</string>
+   </property>
+   <property name="text">
+    <string>Справочная информация</string>
    </property>
   </widget>
  </widget>
