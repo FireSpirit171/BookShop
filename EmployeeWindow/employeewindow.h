@@ -8,6 +8,7 @@
 #include "../Widgets/ClientForm/clientform.h"
 #include "../Widgets/SellerForm/sellerform.h"
 #include "../Widgets/ReferenceInformation/referenceinformation.h"
+#include "../Widgets/BookForm/bookform.h"
 
 namespace Ui {
 class EmployeeWindow;
@@ -34,6 +35,8 @@ private slots:
     void SellerFormClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
     void showReferenceInformation();
     void ReferenceInformationClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
+    void showBookForm();
+    void BookFormClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
 
 private:
     Ui::EmployeeWindow *ui;
@@ -43,6 +46,7 @@ private:
     ClientForm *clientForm;
     SellerForm *sellerForm;
     ReferenceInformation *referenceInformation;
+    BookForm *bookForm;
 };
 
 #endif // EMPLOYEEWINDOW_H

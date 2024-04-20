@@ -31,6 +31,6 @@
 *.out
 *.app
 
-*BookShop_ru_RU.ts
-*SETTINGS.cpp
-*SETTINGS.h
+BookShop_ru_RU.ts
+SETTINGS/
+CMakeLists.txt.user

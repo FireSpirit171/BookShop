@@ -1,7 +1,7 @@
-#include "mainwindow.h"
+#include "MainWindow/mainwindow.h"
 #include "UserWindow/userwindow.h"
 #include "EmployeeWindow/employeewindow.h"
-#include "SETTINGS.h"
+#include "SETTINGS/SETTINGS.h"
 
 #include <string>
 #include <iostream>

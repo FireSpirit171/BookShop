@@ -17,11 +17,11 @@ set(TS_FILES BookShop_ru_RU.ts)
 
 set(PROJECT_SOURCES
     main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
-    SETTINGS.h
-    SETTINGS.cpp
+    SETTINGS/SETTINGS.h
+    SETTINGS/SETTINGS.cpp
+    MainWindow/mainwindow.cpp
+    MainWindow/mainwindow.h
+    MainWindow/mainwindow.ui
     UserWindow/userwindow.h
     UserWindow/userwindow.cpp
     UserWindow/userwindow.ui
@@ -67,6 +67,9 @@ set(PROJECT_SOURCES
     Widgets/ReferenceInformation/referenceinformation.h
     Widgets/ReferenceInformation/referenceinformation.cpp
     Widgets/ReferenceInformation/referenceinformation.ui
+    Widgets/BookForm/bookform.h
+    Widgets/BookForm/bookform.cpp
+    Widgets/BookForm/bookform.ui
 )
 
 

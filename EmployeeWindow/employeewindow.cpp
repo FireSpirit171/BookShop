@@ -9,7 +9,8 @@ EmployeeWindow::EmployeeWindow(QWidget *parent) :
     supplierFoprm(nullptr),
     clientForm(nullptr),
     sellerForm(nullptr),
-    referenceInformation(nullptr)
+    referenceInformation(nullptr),
+    bookForm(nullptr)
 {
     ui->setupUi(this);
     connect(ui->reports, &QPushButton::clicked, this, &EmployeeWindow::showReports);
@@ -18,6 +19,7 @@ EmployeeWindow::EmployeeWindow(QWidget *parent) :
     connect(ui->client, &QPushButton::clicked, this, &EmployeeWindow::showClientForm);
     connect(ui->seller, &QPushButton::clicked, this, &EmployeeWindow::showSellerForm);
     connect(ui->information, &QPushButton::clicked, this, &EmployeeWindow::showReferenceInformation);
+    connect(ui->book, &QPushButton::clicked, this, &EmployeeWindow::showBookForm);
 }
 
 EmployeeWindow::~EmployeeWindow()
@@ -127,6 +129,22 @@ void EmployeeWindow::ReferenceInformationClosed()
     referenceInformation = nullptr;
 }
 
+void EmployeeWindow::showBookForm(){
+    if (!bookForm)
+    {
+        bookForm = new BookForm();
+        connect(bookForm, &BookForm::finished, this, &EmployeeWindow::BookFormClosed);
+    }
+
+    bookForm->exec();
+}
+
+void EmployeeWindow::BookFormClosed()
+{
+    // Удаляем виджет книг
+    delete bookForm;
+    bookForm = nullptr;
+}
 
 
 
