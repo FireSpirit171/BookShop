@@ -70,6 +70,9 @@ set(PROJECT_SOURCES
     Widgets/BookForm/bookform.h
     Widgets/BookForm/bookform.cpp
     Widgets/BookForm/bookform.ui
+    Widgets/OrderForm/orderform.h
+    Widgets/OrderForm/orderform.cpp
+    Widgets/OrderForm/orderform.ui
 )
 
 

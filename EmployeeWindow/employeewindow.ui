@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>638</width>
-    <height>525</height>
+    <width>690</width>
+    <height>597</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
   <widget class="QPushButton" name="reports">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>220</x>
      <y>100</y>
      <width>221</width>
      <height>41</height>
@@ -37,7 +37,7 @@ font-size: 20px</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>210</x>
      <y>40</y>
      <width>271</width>
      <height>41</height>
@@ -54,8 +54,8 @@ color:white</string>
   <widget class="QPushButton" name="publisher">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>340</y>
+     <x>220</x>
+     <y>400</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -72,8 +72,8 @@ font-size:20px</string>
   <widget class="QPushButton" name="supplier">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>400</y>
+     <x>220</x>
+     <y>460</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -90,8 +90,8 @@ font-size:20px</string>
   <widget class="QPushButton" name="client">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>220</y>
+     <x>220</x>
+     <y>280</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -108,8 +108,8 @@ font-size:20px</string>
   <widget class="QPushButton" name="seller">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>280</y>
+     <x>220</x>
+     <y>340</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -126,8 +126,8 @@ font-size:20px</string>
   <widget class="QPushButton" name="information">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>460</y>
+     <x>220</x>
+     <y>520</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -144,8 +144,8 @@ font-size:18px</string>
   <widget class="QPushButton" name="book">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>160</y>
+     <x>220</x>
+     <y>220</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -157,6 +157,24 @@ font-size:20px</string>
    </property>
    <property name="text">
     <string>Книги</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="orders">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>160</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size:20px</string>
+   </property>
+   <property name="text">
+    <string>Заказы</string>
    </property>
   </widget>
  </widget>
