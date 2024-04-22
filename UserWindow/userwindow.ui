@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>748</width>
-    <height>608</height>
+    <width>565</width>
+    <height>464</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>80</x>
      <y>40</y>
      <width>421</width>
      <height>61</height>
@@ -38,8 +38,8 @@ font-size: 30px</string>
   <widget class="QPushButton" name="available_books">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>150</y>
+     <x>150</x>
+     <y>130</y>
      <width>271</width>
      <height>41</height>
     </rect>
@@ -56,8 +56,8 @@ color:black</string>
   <widget class="QPushButton" name="users_orders">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>210</y>
+     <x>150</x>
+     <y>190</y>
      <width>271</width>
      <height>41</height>
     </rect>
@@ -74,8 +74,8 @@ font-size:20px</string>
   <widget class="QPushButton" name="new_order">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>270</y>
+     <x>150</x>
+     <y>250</y>
      <width>271</width>
      <height>41</height>
     </rect>
@@ -87,6 +87,24 @@ font-size:20px</string>
    </property>
    <property name="text">
     <string>Новый заказ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="logout">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>310</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:white;
+color:black;
+font-size:20px</string>
+   </property>
+   <property name="text">
+    <string>Выйти</string>
    </property>
   </widget>
  </widget>

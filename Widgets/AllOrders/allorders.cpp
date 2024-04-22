@@ -38,9 +38,9 @@ void AllOrders::showOrders()
 
     // Установка ширины столбцов
     ui->tableWidget->setColumnWidth(0, 80); // Первый столбец (№ Заказа)
-    ui->tableWidget->setColumnWidth(1, 100); // Второй столбец (Клиент)
-    ui->tableWidget->setColumnWidth(2, 190); // Третий столбец (Книги)
-    ui->tableWidget->setColumnWidth(3, 140); // Третий столбец (Общая стоимость)
+    ui->tableWidget->setColumnWidth(1, 80); // Второй столбец (Клиент)
+    ui->tableWidget->setColumnWidth(2, 220); // Третий столбец (Книги)
+    ui->tableWidget->setColumnWidth(3, 120); // Третий столбец (Общая стоимость)
 
 
     // Установка заголовков столбцов

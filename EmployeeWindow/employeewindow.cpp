@@ -22,7 +22,9 @@ EmployeeWindow::EmployeeWindow(QWidget *parent) :
     connect(ui->information, &QPushButton::clicked, this, &EmployeeWindow::showReferenceInformation);
     connect(ui->book, &QPushButton::clicked, this, &EmployeeWindow::showBookForm);
     connect(ui->orders, &QPushButton::clicked, this, &EmployeeWindow::showOrderForm);
+    connect(ui->logout, &QPushButton::clicked, this, &EmployeeWindow::logout);
 }
+
 
 EmployeeWindow::~EmployeeWindow()
 {
@@ -163,6 +165,11 @@ void EmployeeWindow::OrderFormClosed()
     // Удаляем виджет книг
     delete orderForm;
     orderForm = nullptr;
+}
+
+void EmployeeWindow::logout()
+{
+    this->close();
 }
 
 

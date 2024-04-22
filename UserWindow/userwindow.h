@@ -25,6 +25,7 @@ private slots:
     void ordersWidgetClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
     void showOrderFormForUser(); // Добавляем декларацию слота для обработки закрытия виджета книг
     void OrderFormForUserClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
+    void logout();
 
 private:
     Ui::UserWindow *ui;

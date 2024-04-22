@@ -335,7 +335,7 @@ color: black</string>
    <property name="geometry">
     <rect>
      <x>480</x>
-     <y>170</y>
+     <y>180</y>
      <width>80</width>
      <height>24</height>
     </rect>
@@ -352,7 +352,7 @@ background-color: lightblue</string>
    <property name="geometry">
     <rect>
      <x>610</x>
-     <y>170</y>
+     <y>180</y>
      <width>80</width>
      <height>24</height>
     </rect>
@@ -371,12 +371,35 @@ background-color: lightblue</string>
      <x>460</x>
      <y>100</y>
      <width>256</width>
-     <height>51</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color:white;
 color:black</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>50</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font-size:14px</string>
+   </property>
+   <property name="text">
+    <string>Поиск</string>
    </property>
   </widget>
  </widget>

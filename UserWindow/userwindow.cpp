@@ -15,13 +15,12 @@ UserWindow::UserWindow(int clientid, QWidget *parent) :
     connect(ui->available_books, &QPushButton::clicked, this, &UserWindow::showBooksInStock);
     connect(ui->users_orders, &QPushButton::clicked, this, &UserWindow::showOrders);
     connect(ui->new_order, &QPushButton::clicked, this, &UserWindow::showOrderFormForUser);
+    connect(ui->logout, &QPushButton::clicked, this, &UserWindow::logout);
 }
 
 UserWindow::~UserWindow()
 {
     delete ui;
-    if (booksWidget)
-        delete booksWidget;
 }
 
 void UserWindow::showBooksInStock()
@@ -76,3 +75,9 @@ void UserWindow::OrderFormForUserClosed()
     delete orderFormForUser;
     orderFormForUser = nullptr;
 }
+
+void UserWindow::logout()
+{
+    this->close();
+}
+

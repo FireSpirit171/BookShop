@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>690</width>
-    <height>597</height>
+    <height>569</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -55,7 +55,7 @@ color:white</string>
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>400</y>
+     <y>350</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -73,7 +73,7 @@ font-size:20px</string>
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>460</y>
+     <y>400</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -84,14 +84,14 @@ color:black;
 font-size:20px</string>
    </property>
    <property name="text">
-    <string>Поставщик</string>
+    <string>Поставщики</string>
    </property>
   </widget>
   <widget class="QPushButton" name="client">
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>280</y>
+     <y>250</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -109,7 +109,7 @@ font-size:20px</string>
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>340</y>
+     <y>300</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -127,7 +127,7 @@ font-size:20px</string>
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>520</y>
+     <y>450</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -145,7 +145,7 @@ font-size:18px</string>
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>220</y>
+     <y>200</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -163,7 +163,7 @@ font-size:20px</string>
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>160</y>
+     <y>150</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -175,6 +175,24 @@ font-size:20px</string>
    </property>
    <property name="text">
     <string>Заказы</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="logout">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>500</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color:black;
+font-size:18px</string>
+   </property>
+   <property name="text">
+    <string>Выйти</string>
    </property>
   </widget>
  </widget>

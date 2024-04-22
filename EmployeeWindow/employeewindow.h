@@ -40,6 +40,7 @@ private slots:
     void BookFormClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
     void showOrderForm();
     void OrderFormClosed(); // Добавляем декларацию слота для обработки закрытия виджета книг
+    void logout();
 
 private:
     Ui::EmployeeWindow *ui;
