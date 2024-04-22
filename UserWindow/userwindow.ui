@@ -68,7 +68,25 @@ color:black;
 font-size:20px</string>
    </property>
    <property name="text">
-    <string>Заказы клиента</string>
+    <string>История заказов</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="new_order">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>270</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:white;
+color:black;
+font-size:20px</string>
+   </property>
+   <property name="text">
+    <string>Новый заказ</string>
    </property>
   </widget>
  </widget>

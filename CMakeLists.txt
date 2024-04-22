@@ -73,6 +73,12 @@ set(PROJECT_SOURCES
     Widgets/OrderForm/orderform.h
     Widgets/OrderForm/orderform.cpp
     Widgets/OrderForm/orderform.ui
+    Widgets/OrderFormForUser/orderformforuser.h
+    Widgets/OrderFormForUser/orderformforuser.cpp
+    Widgets/OrderFormForUser/orderformforuser.ui
+    Widgets/UsersOrdersWidgetForUser/usersorderswidgetforuser.h
+    Widgets/UsersOrdersWidgetForUser/usersorderswidgetforuser.cpp
+    Widgets/UsersOrdersWidgetForUser/usersorderswidgetforuser.ui
 )
 
 

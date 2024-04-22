@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>694</width>
-    <height>579</height>
+    <width>571</width>
+    <height>545</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>220</x>
      <y>30</y>
      <width>101</width>
      <height>51</height>
@@ -36,7 +36,7 @@ font-size: 30px</string>
   <widget class="QPushButton" name="all_orders">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>160</x>
      <y>100</y>
      <width>231</width>
      <height>41</height>
@@ -54,7 +54,7 @@ font-size: 20px</string>
   <widget class="QPushButton" name="publisher_books">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>160</x>
      <y>160</y>
      <width>231</width>
      <height>41</height>
@@ -72,7 +72,7 @@ font-size: 20px</string>
   <widget class="QPushButton" name="orders_by_date">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>160</x>
      <y>220</y>
      <width>231</width>
      <height>41</height>
@@ -90,7 +90,7 @@ font-size: 20px</string>
   <widget class="QPushButton" name="client_orders">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>160</x>
      <y>280</y>
      <width>231</width>
      <height>41</height>
@@ -105,29 +105,11 @@ font-size: 20px</string>
     <string>Заказы клиента</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="authors_books">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>340</y>
-     <width>231</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: white;
-color: black;
-font-size: 14px</string>
-   </property>
-   <property name="text">
-    <string>Количество купленных книг автора</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="gistogramm">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>400</y>
+     <x>160</x>
+     <y>340</y>
      <width>231</width>
      <height>41</height>
     </rect>
@@ -144,8 +126,8 @@ font-size: 14px</string>
   <widget class="QPushButton" name="diagramm">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>460</y>
+     <x>160</x>
+     <y>400</y>
      <width>231</width>
      <height>41</height>
     </rect>

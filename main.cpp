@@ -26,7 +26,6 @@ int main(int argc, char *argv[])
     db.setPassword(SETTINGS::get_password());
 
     if (db.open()) {
-        qDebug() << "Connected to database";
         MainWindow w;
 
         // Обработчик события "Войти"
@@ -42,7 +41,23 @@ int main(int argc, char *argv[])
             QString password = w.getPassword();
 
             // Формирование SQL-запроса с вставкой значений
-            QString queryStr = "SELECT COUNT(*) FROM \"Users\" WHERE \"UserRole\" = :role AND \"Login\" = :login AND \"Password\" = :password";
+            QString queryCount = "SELECT COUNT(*) FROM \"Users\" WHERE \"UserRole\" = :role AND \"Login\" = :login AND \"Password\" = :password";
+
+            // Подготовка SQL-запроса
+            QSqlQuery query_count;
+            query_count.prepare(queryCount);
+            query_count.bindValue(":role", role);
+            query_count.bindValue(":login", login);
+            query_count.bindValue(":password", password);
+
+            int count = 0;
+            if(query_count.exec()){
+                query_count.next();
+                count = query_count.value(0).toInt();
+            }
+
+            // Формирование SQL-запроса с вставкой значений
+            QString queryStr = "SELECT \"ClientID\" FROM \"Users\" WHERE \"UserRole\" = :role AND \"Login\" = :login AND \"Password\" = :password";
 
             // Подготовка SQL-запроса
             QSqlQuery query;
@@ -53,35 +68,30 @@ int main(int argc, char *argv[])
 
             // Выполнение запроса
             if (query.exec()) {
-                if (query.next()) {
-                    int count = query.value(0).toInt();
-                    if (count > 0) {
-                        // Если пользователь найден, определяем роль и открываем соответствующее окно
-                        w.hide();
-                        if (role == "Покупатель") {
-                            UserWindow userWindow;
-                            QObject::connect(&userWindow, &UserWindow::finished, [&w]() {
-                                w.show(); // Отображаем главное окно при закрытии EmployeeWindow
-                            });
-                            userWindow.exec();
-                        } else if (role == "Сотрудник") {
-                            EmployeeWindow employeeWindow;
-                            QObject::connect(&employeeWindow, &EmployeeWindow::finished, [&w]() {
-                                w.show(); // Отображаем главное окно при закрытии EmployeeWindow
-                            });
-                            employeeWindow.exec();
-                        }
-                    } else {
-                        // Если пользователь не найден, выводим сообщение об ошибке
-                        QMessageBox::warning(&w, "Ошибка авторизации", "Неверный логин или пароль!");
+                if (query.next() || count>0) {
+                    int clientID = query.value(0).toInt(); // Получение ClientID
+                    w.hide();
+                    if (role == "Покупатель") {
+                        UserWindow userWindow(clientID); // Передача ClientID в конструктор
+                        QObject::connect(&userWindow, &UserWindow::finished, [&w]() {
+                            w.show(); // Отображаем главное окно при закрытии UserWindow
+                        });
+                        userWindow.exec();
+                    } else if (role == "Сотрудник") {
+                        EmployeeWindow employeeWindow;
+                        QObject::connect(&employeeWindow, &EmployeeWindow::finished, [&w]() {
+                            w.show(); // Отображаем главное окно при закрытии EmployeeWindow
+                        });
+                        employeeWindow.exec();
                     }
+                } else {
+                    // Обработка ситуации, когда запрос не вернул результатов
+                    QMessageBox::warning(&w, "Ошибка авторизации", "Неверный логин или пароль!");
                 }
             } else {
                 // Вывод сообщения об ошибке в случае неудачи выполнения запроса
                 qDebug() << "Query execution failed:" << query.lastError().text();
             }
-
-
 
         });
 

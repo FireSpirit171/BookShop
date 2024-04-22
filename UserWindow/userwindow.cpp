@@ -1,18 +1,20 @@
 #include "userwindow.h"
 #include "ui_userwindow.h"
-#include <iostream>
 #include <QtSql>
 
-UserWindow::UserWindow(QWidget *parent) :
+UserWindow::UserWindow(int clientid, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::UserWindow),
+    client_id(clientid),
     booksWidget(nullptr),
-    ordersWidget(nullptr)
+    ordersWidgetForUser(nullptr),
+    orderFormForUser(nullptr)
 {
     ui->setupUi(this);
 
     connect(ui->available_books, &QPushButton::clicked, this, &UserWindow::showBooksInStock);
     connect(ui->users_orders, &QPushButton::clicked, this, &UserWindow::showOrders);
+    connect(ui->new_order, &QPushButton::clicked, this, &UserWindow::showOrderFormForUser);
 }
 
 UserWindow::~UserWindow()
@@ -42,18 +44,35 @@ void UserWindow::booksWidgetClosed()
 }
 
 void UserWindow::showOrders(){
-    if (!ordersWidget)
+    if (!ordersWidgetForUser)
     {
-        ordersWidget = new UsersOrdersWidget();
-        connect(ordersWidget, &UsersOrdersWidget::finished, this, &UserWindow::ordersWidgetClosed);
+        ordersWidgetForUser = new UsersOrdersWidgetForUser(client_id);
+        connect(ordersWidgetForUser, &UsersOrdersWidgetForUser::finished, this, &UserWindow::ordersWidgetClosed);
     }
 
-    ordersWidget->exec();
+    ordersWidgetForUser->exec();
 }
 
 void UserWindow::ordersWidgetClosed()
 {
     // Удаляем виджет книг
-    delete ordersWidget;
-    ordersWidget = nullptr;
+    delete ordersWidgetForUser;
+    ordersWidgetForUser = nullptr;
+}
+
+void UserWindow::showOrderFormForUser(){
+    if (!orderFormForUser)
+    {
+        orderFormForUser = new OrderFormForUser(client_id);
+        connect(orderFormForUser, &OrderFormForUser::finished, this, &UserWindow::OrderFormForUserClosed);
+    }
+
+    orderFormForUser->exec();
+}
+
+void UserWindow::OrderFormForUserClosed()
+{
+    // Удаляем виджет книг
+    delete orderFormForUser;
+    orderFormForUser = nullptr;
 }
